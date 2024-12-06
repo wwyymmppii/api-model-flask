@@ -54,4 +54,5 @@ def index():
     return jsonify(result)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)  # Match Dockerfile default port
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", "8080")))
+
